@@ -1,3 +1,7 @@
+import kong.unirest.HttpResponse;
+import kong.unirest.JsonNode;
+import kong.unirest.Unirest;
+
 import java.util.Scanner;
 
 public class Main {
