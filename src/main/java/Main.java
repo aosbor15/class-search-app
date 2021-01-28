@@ -14,7 +14,12 @@ public class Main {
     }
 
     private static void search(String query) {
-        System.out.println("Search not implemented yet!");
+        final String BASE_URL = "https://sis.jhu.edu/api/classes";
+        final String KEY = "j9kcEN2OhBRogSxtbvYSChbH4Z9lRqzL";
+
+        String endpoint = BASE_URL + "/codes/schools?Key=" + KEY;
+        HttpResponse<JsonNode> jsonResponse = Unirest.get(endpoint).asJson();
+        System.out.println(jsonResponse.getBody().toString());
     }
 }
 
